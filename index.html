@@ -83,8 +83,21 @@
     function trackSocial(platform, socialLink) {
       window.ttq.track('ClickSocial', { platform: platform, socialLink: socialLink });
     }
+    // Add event listeners to track clicks
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('instagram-link').addEventListener('click', function() {
+        trackSocial('Instagram', 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q');
+        trackButtonClick('Instagram', 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q', 'instagram_content_id', 'social', 'Instagram Link', 0, 'USD', 'Instagram');
+      });
+
+      document.getElementById('tiktok-link').addEventListener('click', function() {
+        trackSocial('TikTok', 'https://www.tiktok.com/@viola.ksa1');
+        trackButtonClick('TikTok', 'https://www.tiktok.com/@viola.ksa1', 'tiktok_content_id', 'social', 'TikTok Link', 0, 'USD', 'TikTok');
+      });
+
 
     // Add event listeners to track clicks
+    
     document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('instagram-link').addEventListener('click', function() {
         trackSocial('Instagram', 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q');
