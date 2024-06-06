@@ -76,24 +76,35 @@ function trackChefzClick(contentID, contentType, contentName, contentValue, cont
     currency: contentCurrency
   });
 }
-
-function trackInstagramClick() {
+  
+function trackinstagramClick(contentID, contentType, contentName, contentValue, contentCurrency) {
   window.ttq.track('instagram', {
-    button_name: 'Instagram Button',
-    button_link: 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q'
+    contents: [{
+      content_id: contentID,
+      content_type: contentType,
+      content_name: contentName
+    }],
+    value: contentValue,
+    currency: contentCurrency
   });
 }
-
-function trackTikTokClick() {
+  function tracktiktokClick(contentID, contentType, contentName, contentValue, contentCurrency) {
   window.ttq.track('tiktok', {
-    button_name: 'TikTok Button',
-    button_link: 'https://www.tiktok.com/@viola.ksa1'
+    contents: [{
+      content_id: contentID,
+      content_type: contentType,
+      content_name: contentName
+    }],
+    value: contentValue,
+    currency: contentCurrency
   });
 }
-
 // Add event listeners to track clicks
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('instagram-link').addEventListener('click', trackInstagramClick);
+  document.getElementById('instagram-link').addEventListener('click',function() trackInstagramClick( 'jahez_content_id', 'product', 'Jahez Product', 100, 'USD'
+    
+  );
+});
 
   document.getElementById('tiktok-link').addEventListener('click', trackTikTokClick);
 
