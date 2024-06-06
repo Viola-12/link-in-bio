@@ -39,79 +39,72 @@
     ttq.load('CPGC2UBC77U5SPBHGOJ0'); // Replace with your actual TikTok Pixel ID
     ttq.page();
   }(window,document,'ttq');
-
-  // Event Tracking Functions with Parameters
-  function trackButtonClick(buttonName, buttonLink, contentID, contentType, contentName, contentValue, contentCurrency) {
-    window.ttq.track('ClickButton', {
-      contents: [{
-        content_id: contentID,
-        content_type: contentType,
-        content_name: contentName
-      }],
-      value: contentValue,
-      currency: contentCurrency,
-      button_name: buttonName,
-      button_link: buttonLink
-    });
-  }
-
-  function trackJahezClick(contentID, contentType, contentName, contentValue, contentCurrency) {
-    window.ttq.track('jahez click', {
-      contents: [{
-        content_id: contentID,
-        content_type: contentType,
-        content_name: contentName
-      }],
-      value: contentValue,
-      currency: contentCurrency
-    });
-  }
-
-  function trackChefzClick(contentID, contentType, contentName, contentValue, contentCurrency) {
-    window.ttq.track('chefz click', {
-      contents: [{
-        content_id: contentID,
-        content_type: contentType,
-        content_name: contentName
-      }],
-      value: contentValue,
-      currency: contentCurrency
-    });
-  }
-
-  // Add event listeners to track clicks
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('instagram-link').addEventListener('click', function() {
-      trackSocial('Instagram', 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q');
-    });
-
-    document.getElementById('tiktok-link').addEventListener('click', function() {
-      trackSocial('TikTok', 'https://www.tiktok.com/@viola.ksa1');
-    });
-
-    document.getElementById('jahez-link').addEventListener('click', function() {
-      trackJahezClick('jahez_content_id', 'product', 'Jahez Product', 100, 'USD');
-    });
-
-    document.getElementById('chefz-link').addEventListener('click', function() {
-      trackChefzClick('chefz_content_id', 'product', 'Chefz Product', 150, 'USD');
-    });
+function trackButtonClick(buttonName, buttonLink, contentID, contentType, contentName, contentValue, contentCurrency) {
+  window.ttq.track('ClickButton', {
+    contents: [{
+      content_id: contentID,
+      content_type: contentType,
+      content_name: contentName
+    }],
+    value: contentValue,
+    currency: contentCurrency,
+    button_name: buttonName,
+    button_link: buttonLink
   });
-   function trackSocial(platform, socialLink) {
-      window.ttq.track('ClickSocial', { platform: platform, socialLink: socialLink });
-    }
+}
 
-    // Add event listeners to track clicks
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('instagram-link').addEventListener('click', function() {
-        trackSocial('Instagram', 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q');
-      });
+function trackJahezClick(contentID, contentType, contentName, contentValue, contentCurrency) {
+  window.ttq.track('jahez click', {
+    contents: [{
+      content_id: contentID,
+      content_type: contentType,
+      content_name: contentName
+    }],
+    value: contentValue,
+    currency: contentCurrency
+  });
+}
 
-      document.getElementById('tiktok-link').addEventListener('click', function() {
-        trackSocial('TikTok', 'https://www.tiktok.com/@viola.ksa1');
-      });
+function trackChefzClick(contentID, contentType, contentName, contentValue, contentCurrency) {
+  window.ttq.track('chefz click', {
+    contents: [{
+      content_id: contentID,
+      content_type: contentType,
+      content_name: contentName
+    }],
+    value: contentValue,
+    currency: contentCurrency
+  });
+}
 
+function trackInstagramClick() {
+  window.ttq.track('ClickButton', {
+    button_name: 'Instagram Button',
+    button_link: 'https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q'
+  });
+}
 
+function trackTikTokClick() {
+  window.ttq.track('ClickButton', {
+    button_name: 'TikTok Button',
+    button_link: 'https://www.tiktok.com/@viola.ksa1'
+  });
+}
+
+// Add event listeners to track clicks
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('instagram-link').addEventListener('click', trackInstagramClick);
+
+  document.getElementById('tiktok-link').addEventListener('click', trackTikTokClick);
+
+  document.getElementById('jahez-link').addEventListener('click', function() {
+    trackJahezClick('jahez_content_id', 'product', 'Jahez Product', 100, 'USD');
+  });
+
+  document.getElementById('chefz-link').addEventListener('click', function() {
+    trackChefzClick('chefz_content_id', 'product', 'Chefz Product', 150, 'USD');
+  });
+});
 </script>
 
     <!-- Normalize Css -->
