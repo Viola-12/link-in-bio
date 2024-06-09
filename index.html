@@ -10,79 +10,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
 
-  ttq.load('CPGC2UBC77U5SPBHGOJ0');
-  ttq.page();
-}(window, document, 'ttq');
-      // add this before event code to all pages where PII data postback is expected and appropriate 
-ttq.identify({
-	"email": "<hashed_email_address>", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
-	"phone_number": "<hashed_phone_number>", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
-	"external_id": "<hashed_extenal_id>" // string. Any unique identifier, such as loyalty membership IDs, user IDs, and external cookie IDs.It must be hashed with SHA-256 on the client side.
-});
-
-ttq.track('chefz click', {
-	"contents": [
-		{
-			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
-			"content_type": "<content_type>", // string. Either product or product_group.
-			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
-
-ttq.track('jahez click', {
-	"contents": [
-		{
-			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
-			"content_type": "<content_type>", // string. Either product or product_group.
-			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
-
-ttq.track('instagram', {
-	"contents": [
-		{
-			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
-			"content_type": "<content_type>", // string. Either product or product_group.
-			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
-
-ttq.track('tiktok', {
-	"contents": [
-		{
-			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
-			"content_type": "<content_type>", // string. Either product or product_group.
-			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
-
-ttq.track('ClickButton', {
-	"contents": [
-		{
-			"content_id": "<content_identifier>", // string. ID of the product. Example: "1077218".
-			"content_type": "<content_type>", // string. Either product or product_group.
-			"content_name": "<content_name>" // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": "<content_value>", // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
-</script>
+        ttq.load('CPGC2UBC77U5SPBHGOJ0');
+        ttq.page();
+      }(window, document, 'ttq');
+    </script>
 
     <!-- Normalize Css -->
     <link rel="stylesheet" href="css/normalize.css" />
@@ -180,22 +114,81 @@ ttq.track('ClickButton', {
         }
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("jahez-link").addEventListener("click", function() {
+          ttq.track('ClickButton', {
+            "contents": [
+              {
+                "content_id": "jahez_button", // unique identifier for the Jahez button
+                "content_type": "button", // type of content
+                "content_name": "Jahez Button" // name of the content
+              }
+            ],
+            "value": 1, // example value
+            "currency": "USD" // currency code
+          });
+        });
+
+        document.getElementById("chefz-link").addEventListener("click", function() {
+          ttq.track('ClickButton', {
+            "contents": [
+              {
+                "content_id": "chefz_button", // unique identifier for the Chefz button
+                "content_type": "button", // type of content
+                "content_name": "Chefz Button" // name of the content
+              }
+            ],
+            "value": 1, // example value
+            "currency": "USD" // currency code
+          });
+        });
+
+        document.getElementById("instagram-link").addEventListener("click", function() {
+          ttq.track('ClickButton', {
+            "contents": [
+              {
+                "content_id": "instagram_button", // unique identifier for the Instagram button
+                "content_type": "button", // type of content
+                "content_name": "Instagram Button" // name of the content
+              }
+            ],
+            "value": 1, // example value
+            "currency": "USD" // currency code
+          });
+        });
+
+        document.getElementById("tiktok-link").addEventListener("click", function() {
+          ttq.track('ClickButton', {
+            "contents": [
+              {
+                "content_id": "tiktok_button", // unique identifier for the TikTok button
+                "content_type": "button", // type of content
+                "content_name": "TikTok Button" // name of the content
+              }
+            ],
+            "value": 1, // example value
+            "currency": "USD" // currency code
+          });
+        });
+      });
+    </script>
   </head>
   <body>
-      <div class="container">
-    <div class="logo"></div>
-    <div class="text">
-      <h1>Viola | ڤيولا</h1>
-      <p>💜 تخصصنا كرانشي تشوكليت</p>
+    <div class="container">
+      <div class="logo"></div>
+      <div class="text">
+        <h1>Viola | ڤيولا</h1>
+        <p>💜 تخصصنا كرانشي تشوكليت</p>
+      </div>
+      <div class="icons">
+        <a id="instagram-link" href="https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q"><i class="fab fa-instagram"></i></a>
+        <a id="tiktok-link" href="https://www.tiktok.com/@viola.ksa1"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="buttons">
+        <a id="jahez-link" href="https://jahez.link/riTIhToAPJb" class="button1">للطلب عن طريق جاهز</a>
+        <a id="chefz-link" href="https://thechefzco.app.link/HLtTWZdtCJb" class="button2">للطلب عن طريق ذا شفز</a>
+      </div>
     </div>
-    <div class="icons">
-      <a id="instagram-link" href="https://www.instagram.com/viola.ksa1?igsh=MTZrMGNmbXA0bGZyZg%3D%3D&utm_source=q"><i class="fab fa-instagram"></i></a>
-      <a id="tiktok-link" href="https://www.tiktok.com/@viola.ksa1"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <div class="buttons">
-      <a id="jahez-link" href="https://jahez.link/riTIhToAPJb" class="button1">للطلب عن طريق جاهز</a>
-      <a id="chefz-link" href="https://thechefzco.app.link/HLtTWZdtCJb" class="button2">للطلب عن طريق ذا شفز</a>
-    </div>
-  </div>
   </body>
-</html> 
+</html>
