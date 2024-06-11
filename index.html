@@ -115,67 +115,32 @@
         }
       }
     </style>
-    
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("jahez-link").addEventListener("click", function() {
-          ttq.track('ClickButton', {
-            "contents": [
-              {
-                "content_id": "jahez_button", // unique identifier for the Jahez button
-                "content_type": "button", // type of content
-                "content_name": "Jahez Button" // name of the content
-              }
-            ],
-            "value": 1, // example value
-            "currency": "USD" // currency code
-          });
-        });
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = [
+      { id: "jahez-link", content_id: "jahez_button", content_name: "Jahez Button" },
+      { id: "chefz-link", content_id: "chefz_button", content_name: "Chefz Button" },
+      { id: "instagram-link", content_id: "instagram_button", content_name: "Instagram Button" },
+      { id: "tiktok-link", content_id: "tiktok_button", content_name: "TikTok Button" }
+    ];
 
-        document.getElementById("chefz-link").addEventListener("click", function() {
-          ttq.track('ClickButton', {
-            "contents": [
-              {
-                "content_id": "chefz_button", // unique identifier for the Chefz button
-                "content_type": "button", // type of content
-                "content_name": "Chefz Button" // name of the content
-              }
-            ],
-            "value": 1, // example value
-            "currency": "USD" // currency code
-          });
-        });
-
-        document.getElementById("instagram-link").addEventListener("click", function() {
-          ttq.track('ClickButton', {
-            "contents": [
-              {
-                "content_id": "instagram_button", // unique identifier for the Instagram button
-                "content_type": "button", // type of content
-                "content_name": "Instagram Button" // name of the content
-              }
-            ],
-            "value": 1, // example value
-            "currency": "USD" // currency code
-          });
-        });
-
-        document.getElementById("tiktok-link").addEventListener("click", function() {
-          ttq.track('ClickButton', {
-            "contents": [
-              {
-                "content_id": "tiktok_button", // unique identifier for the TikTok button
-                "content_type": "button", // type of content
-                "content_name": "TikTok Button" // name of the content
-              }
-            ],
-            "value": 1, // example value
-            "currency": "USD" // currency code
-          });
+    buttons.forEach(button => {
+      document.getElementById(button.id).addEventListener("click", function() {
+        ttq.track('ClickButton', {
+          "contents": [
+            {
+              "content_id": button.content_id,
+              "content_type": "button",
+              "content_name": button.content_name
+            }
+          ],
+          "value": 1,
+          "currency": "USD"
         });
       });
-    </script>
-    
+    });
+  });
+</script>
     
   </head>
  <body>
